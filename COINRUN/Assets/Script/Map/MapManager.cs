@@ -17,9 +17,9 @@ public class MapManager
     public MapManager()
     {
         map = new mapData();
-        map.f1 = "111111111111111111100011111000111111111111111111";
-        map.f2 = "";
-        map.f3 = "";
         map.f4 = "";
+        map.f3 = "";
+        map.f2 = "";
+        map.f1 = "111111111111111111100011111000111111111111111111";
     }
 }
