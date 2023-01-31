@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DeadLine
   - Ground
+  - player
   layers:
   - Default
   - TransparentFX
