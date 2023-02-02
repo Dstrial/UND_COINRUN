@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CharacterManager : MonoBehaviour {
     float jumpPower;
@@ -19,6 +21,7 @@ public class CharacterManager : MonoBehaviour {
         time += Time.deltaTime;
 
         Jump();
+        FallDown();
         GameOver();
     }
 
@@ -31,6 +34,12 @@ public class CharacterManager : MonoBehaviour {
                     time = 0f;
                 }
             }
+        }
+    }
+
+    void FallDown() {
+        if (Input.GetMouseButton(1)) {
+            rigid.velocity = new Vector2(0, -20f);
         }
     }
 
