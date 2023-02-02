@@ -33,7 +33,7 @@ public class Movement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            if (rigid.velocity.y < 0.1f)            // 낙하중일 때만 체크
+            if (rigid.velocity.y <= 0)            // 낙하중일 때만 체크
             {
                 jmpCount = 0;  
             }
