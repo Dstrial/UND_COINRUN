@@ -21,7 +21,7 @@ public class Coins : MonoBehaviour
 
     private void Start()
     {
-        map = GetComponentInParent<Map>();
+        map = GameManager.Inst.Map;
 
         coinCode = map.MapData.map.coin;
 

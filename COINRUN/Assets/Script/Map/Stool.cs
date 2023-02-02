@@ -20,7 +20,7 @@ public class Stool : MonoBehaviour
 
     private void Start()
     {
-        map = GetComponentInParent<Map>();
+        map = GameManager.Inst.Map;
 
         switch (floor)
         {

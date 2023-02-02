@@ -12,6 +12,6 @@ public class Score : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         score += 100 * mapSpeed * Time.deltaTime;
-        Debug.Log(score);
+        //Debug.Log(score);
     }
 }
