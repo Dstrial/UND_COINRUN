@@ -1,34 +1,38 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class CharacterManager : MonoBehaviour {
+public class CharacterManager : MonoBehaviour
+{
     float jumpPower;
     float jumpCount;
     float time;
     Rigidbody2D rigid;
-    void Start() {
+
+    void Start()
+    {
         jumpCount = 0;
         jumpPower = 11;
         rigid = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
         time += Time.deltaTime;
 
         Jump();
-        FallDown();
-        GameOver();
     }
 
-    void Jump() {
-        if (time > 0.2f) {
-            if (jumpCount < 2) {
-                if (Input.GetMouseButtonDown(0)) {
+    void Jump()
+    {
+        if (time > 0.2f)
+        {
+            if (jumpCount < 2)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
                     rigid.velocity = new Vector2(0, jumpPower);
                     jumpCount++; ;
                     time = 0f;
@@ -37,20 +41,10 @@ public class CharacterManager : MonoBehaviour {
         }
     }
 
-    void FallDown() {
-        if (Input.GetMouseButton(1)) {
-            rigid.velocity = new Vector2(0, -20f);
-        }
-    }
-
-    void GameOver() {
-        if (transform.position.y < -6f) {
-            Time.timeScale = 0;
-            Debug.Log("GAME OVER!");
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.CompareTag("Ground")) {
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
             if (rigid.velocity.y < 0.1f)            // 낙하중일 때만 체크
             {
                 jumpCount = 0;

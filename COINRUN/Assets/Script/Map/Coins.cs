@@ -17,14 +17,13 @@ public class Coins : MonoBehaviour
     float coinHeihtOffset = 2.7f;
     Vector2 firstDir = Vector2.zero;
 
-    MapManager mapData;
-
     Map map;
 
-    private void Awake()
+    private void Start()
     {
-        mapData = new MapManager();
-        coinCode = mapData.map.coin;
+        map = GameManager.Inst.Map;
+
+        coinCode = map.MapData.map.coin;
 
         coins = new Transform[transform.childCount];
 
@@ -33,17 +32,11 @@ public class Coins : MonoBehaviour
             coins[i] = transform.GetChild(i);
             if (i == 0)
             {
-                firstDir.y = coins[0].transform.position.y; 
+                firstDir.y = coins[0].transform.position.y;
             }
 
             BlockSeting(coins[i]);
         }
-
-    }
-
-    private void Start()
-    {
-        map = GetComponentInParent<Map>();
     }
 
     private void Update()
