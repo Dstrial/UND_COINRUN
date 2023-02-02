@@ -16,31 +16,29 @@ public class Stool : MonoBehaviour
     const float WIDTH = 2.525f;            // 그림 가로 크기
     //float currentSpeed = 1.0f;             // 지속적으로 스피드 증가
 
-    MapManager mapData;
     Map map;
 
-    private void Awake()
+    private void Start()
     {
-        mapData = new MapManager();
+        map = GetComponentInParent<Map>();
 
         switch (floor)
         {
             case 1:
-                mapCode = mapData.map.f1;
+                mapCode = map.MapData.map.f1;
                 break;
             case 2:
-                mapCode = mapData.map.f2;
+                mapCode = map.MapData.map.f2;
                 break;
             case 3:
-                mapCode = mapData.map.f3;
+                mapCode = map.MapData.map.f3;
                 break;
             case 4:
-                mapCode = mapData.map.f4;
+                mapCode = map.MapData.map.f4;
                 break;
             default:
                 break;
         }
-
 
         grounds = new Transform[transform.childCount];
 
@@ -49,11 +47,6 @@ public class Stool : MonoBehaviour
             grounds[i] = transform.GetChild(i);
             BlockSeting(grounds[i]);
         }
-    }
-
-    private void Start()
-    {
-        map = GetComponentInParent<Map>();
     }
 
     private void Update()
