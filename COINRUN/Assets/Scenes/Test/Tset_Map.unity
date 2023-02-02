@@ -298,11 +298,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7027059691078324527, guid: 0273793ffb2efba48bf0fdc7e912609f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.6
+      value: -5.59
       objectReference: {fileID: 0}
     - target: {fileID: 7027059691078324527, guid: 0273793ffb2efba48bf0fdc7e912609f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.84
+      value: -2.52
       objectReference: {fileID: 0}
     - target: {fileID: 7027059691078324527, guid: 0273793ffb2efba48bf0fdc7e912609f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -505,7 +505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1491901561215039294, guid: 2a644b224c6c32c448b7b72c1c47d7f0, type: 3}
       propertyPath: maxPlayTime
-      value: 5
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a644b224c6c32c448b7b72c1c47d7f0, type: 3}
@@ -681,6 +681,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 399681722983967844, guid: c6030bc8f62473143b62790ee55ec6b4, type: 3}
+      propertyPath: testOn
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6256748987490851938, guid: c6030bc8f62473143b62790ee55ec6b4, type: 3}
       propertyPath: m_Name
       value: Map
