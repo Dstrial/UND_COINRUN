@@ -645,6 +645,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 399681722983967844, guid: c6030bc8f62473143b62790ee55ec6b4, type: 3}
+      propertyPath: testOn
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6256748987490851938, guid: c6030bc8f62473143b62790ee55ec6b4, type: 3}
       propertyPath: m_Name
       value: Map
