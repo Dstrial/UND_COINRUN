@@ -21,6 +21,7 @@ public class ScoreUI : MonoBehaviour
 
     private void Refresh(int score)
     {
-        scoreText.text = $"Score : {score}";
+        scoreText.text = $"Score : {score:##0}";
     }
+
 }
